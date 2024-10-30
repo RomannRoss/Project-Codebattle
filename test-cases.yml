@@ -39,7 +39,7 @@
   prerequisites: |
     Открыта страница логина https://codebattle.hexlet.io/session/new?locale=en&next=%2F
   test-data: |
-    
+    Логин = hexlet, Пароль = badpass
   steps:
     - Вводим логин
     - Вводим пароль
@@ -84,7 +84,7 @@
      Пользователь должен зарегистрироваться
 
 - summary: |
-    Проверка возможности сыграть простую битву без регистрации
+    Проверка возможности пользователя сыграть простую битву без регистрации
   requirement: |
     При нажатии на кнопку "Try simple battle" незарегистрированным пользователем происходит переход на страницу битвы
   prerequisites: |
@@ -97,27 +97,172 @@
      Должен произойти переход на страницу битвы
 
 - summary: |
-    
+    Проверка возможности пользователя сыграть с другом 
   requirement: |
      
   prerequisites: |
-    Открыта страница логина 
+     
   test-data: |
     
   steps:
   
   expected-result: |
 
-  - summary: |
-    
+
+- summary: |
+    Проверка возможности пользователя сыграть с ботом
   requirement: |
      
   prerequisites: |
-    Открыта страница логина https://codebattle.hexlet.io/session/new?locale=en&next=%2F
+    
   test-data: |
     
   steps:
   
   expected-result: |
 
+- summary: |
+    Проверка возможности пользователя сыграть со случайным соперником
+  requirement: |
+     
+  prerequisites: |
     
+  test-data: |
+    
+  steps:
+  
+  expected-result: |
+
+- summary: |
+    Проверка возможности пользователя создать турнир
+  requirement: |
+     
+  prerequisites: |
+    
+  test-data: |
+    
+  steps:
+  
+  expected-result: |
+
+
+- summary: |
+    Проверка возможности пользователя сыграть турнир с друзьями
+  requirement: |
+     
+  prerequisites: |
+    
+  test-data: |
+    
+  steps:
+  
+  expected-result: |
+
+- summary: |
+    Проверка возможности пользователя просмотреть свой профиль
+  requirement: |
+     
+  prerequisites: |
+    
+  test-data: |
+    
+  steps:
+  
+  expected-result: |
+
+- summary: |
+    Проверка возможности пользователя зайти в настройки
+  requirement: |
+     
+  prerequisites: |
+    
+  test-data: |
+    
+  steps:
+  
+  expected-result: |
+
+- summary: |
+    Проверка возможности пользователя просмотреть рейтинг
+  requirement: |
+     
+  prerequisites: |
+    
+  test-data: |
+    
+  steps:
+  
+  expected-result: |
+
+- summary: |
+    Проверка возможности пользователя просмотреть задачи
+  requirement: |
+     
+  prerequisites: |
+    
+  test-data: |
+    
+  steps:
+  
+  expected-result: |
+
+- summary: |
+    Проверка возможности пользователя просмотреть список турниров
+  requirement: |
+     
+  prerequisites: |
+    
+  test-data: |
+    
+  steps:
+  
+  expected-result: |
+
+- summary: |
+    Проверка скорости загрузки сайта
+  requirement: |
+     
+  prerequisites: |
+    
+  test-data: |
+    
+  steps:
+  
+  expected-result: |
+
+- summary: |
+    Проверка адаптивности сайта на различных устройствах (Galaxy Mini S5570, Lumia Series, Nexus 4)
+  requirement: |
+     
+  prerequisites: |
+    
+  test-data: |
+    
+  steps:
+  
+  expected-result: |
+
+
+- summary: |
+    Проверка работы сайта на различных устройствах (Galaxy Mini S5570, Lumia Series, Nexus 4)
+  requirement: |
+     
+  prerequisites: |
+    
+  test-data: |
+    
+  steps:
+  
+  expected-result: |
+
+- summary: |
+     Проверка совместимости сайта с последними версиями браузеров (Google Chrome, Mozilla Firefox, Opera)
+  requirement: |
+     
+  prerequisites: |
+    
+  test-data: |
+    
+  steps:
+  
+  expected-result: |
