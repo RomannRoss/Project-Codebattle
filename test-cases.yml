@@ -1,22 +1,107 @@
 ---
 - summary: |
-    
+    Проверка регистрации пользователя
   requirement: |
-    
+    При верном вводе никнейма, почты, пароля и подтверждения пароля пользователь должен зарегистрироваться
   prerequisites: |
-    
+    Открыта страница регистрации https://codebattle.hexlet.io/users/new?next=/
   test-data: |
     
   steps:
-  
+    - Вводим никнейм
+    - Вводим почту
+    - Вводим пароль
+    - Вводим подтверждение пароля
+    - Нажимаем на кнопку "Submit"
+    - Переходим в почту и подтверждаем учетную запись
   expected-result: |
+    Пользователь должен зарегистрироваться
+    
+- summary: |
+    Проверка входа пользователя с существующими логином и паролем
+  requirement: |
+    При верном вводе логине и пароля пользователь должен войти в систему
+  prerequisites: |
+    Открыта страница логина https://codebattle.hexlet.io/session/new?locale=en&next=%2F
+  test-data: |
+    
+  steps:
+    - Вводим логин
+    - Вводим пароль
+    - Нажимаем на кнопку "Submit"
+  expected-result: |
+    Пользователь должен попасть на главную страницу
+
+- summary: |
+    Проверка входа пользователя с несуществующими логином и паролем
+  requirement: |
+     При неправильном логине или пароле пользователь должен получить сообщение об ошибке
+  prerequisites: |
+    Открыта страница логина https://codebattle.hexlet.io/session/new?locale=en&next=%2F
+  test-data: |
+    
+  steps:
+    - Вводим логин
+    - Вводим пароль
+    - Нажимаем на кнопку "Submit"
+  expected-result: |
+    Пользователь должен получить сообщение об ошибке
+
+- summary: |
+    Проверка регистрации пользователя через Github
+  requirement: |
+    При верном вводе логине и пароля пользователь зарегистрироваться
+  prerequisites: |
+    Открыта страница логина https://codebattle.hexlet.io/session/new?locale=en&next=%2F
+  test-data: |
+ 
+  steps:
+    - Нажимаем на кнопку "Sign in with Github"
+    - Переходим на страницу https://github.com/login?client_id=338bfc1dc364ae1bbd7f&return_to=%2Flogin%2Foauth%2Fauthorize%3Fclient_id%3D338bfc1dc364ae1bbd7f%26redirect_uri%3Dhttps%253A%252F%252Fcodebattle.hexlet.io%252Fauth%252Fgithub%252Fcallback%26scope%3Duser%253Aemail
+    - Вводим логин
+    - Вводим пароль
+    - Нажимаем на кнопку "Sign in"
+    - Переходим в почту и подтверждаем учетную запись
+  expected-result: |
+     Пользователь должен зарегистрироваться
+
+- summary: |
+    Проверка регистрации пользователя через Discord
+  requirement: |
+    При верном вводе логине и пароля пользователь должен зарегистрироваться
+  prerequisites: |
+    Открыта страница логина https://codebattle.hexlet.io/session/new?locale=en&next=%2F
+  test-data: |
+    
+  steps:
+    - Нажимаем на кнопку "Sign in with Discord"
+    - Переходим на страницу https://discord.com/login?redirect_to=%2Foauth2%2Fauthorize%3Fscope%3Didentify%2Bemail%26client_id%3D805773644780666930%26redirect_uri%3Dhttps%253A%252F%252Fcodebattle.hexlet.io%252Fauth%252Fdiscord%252Fcallback%26response_type%3Dcode
+    - Вводим логин
+    - Вводим пароль
+    - Нажимаем на кнопку "Вход"
+    - Переходим в почту и подтверждаем учетную запись
+  expected-result: |
+     Пользователь должен зарегистрироваться
+
+- summary: |
+    Проверка возможности сыграть простую битву без регистрации
+  requirement: |
+    При нажатии на кнопку "Try simple battle" незарегистрированным пользователем происходит переход на страницу битвы
+  prerequisites: |
+    Открыта главная страница https://codebattle.hexlet.io/
+  test-data: |
+    empty
+  steps:
+    - Нажимаем на кнопку "Try simple battle" 
+  expected-result: |
+     Должен произойти переход на страницу битвы
 
 - summary: |
     
   requirement: |
-    
+     
   prerequisites: |
-    
+    Открыта страница логина 
   test-data: |
     
   steps:
@@ -26,11 +111,13 @@
   - summary: |
     
   requirement: |
-    
+     
   prerequisites: |
-    
+    Открыта страница логина https://codebattle.hexlet.io/session/new?locale=en&next=%2F
   test-data: |
     
   steps:
   
   expected-result: |
+
+    
