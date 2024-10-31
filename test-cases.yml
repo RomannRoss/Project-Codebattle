@@ -6,7 +6,7 @@
   prerequisites: |
     Открыта страница регистрации https://codebattle.hexlet.io/users/new?next=/
   test-data: |
-    
+    Никнейм = example, почта = example@mail.com, пароль = 123456
   steps:
     - Вводим никнейм
     - Вводим почту
@@ -24,7 +24,7 @@
   prerequisites: |
     Открыта страница логина https://codebattle.hexlet.io/session/new?locale=en&next=%2F
   test-data: |
-    
+    Логин = example@mail.com, пароль = 123456
   steps:
     - Вводим логин
     - Вводим пароль
@@ -54,7 +54,7 @@
   prerequisites: |
     Открыта страница логина https://codebattle.hexlet.io/session/new?locale=en&next=%2F
   test-data: |
- 
+    Логин = example@mail.com, пароль = 123456
   steps:
     - Нажимаем на кнопку "Sign in with Github"
     - Переходим на страницу https://github.com/login?client_id=338bfc1dc364ae1bbd7f&return_to=%2Flogin%2Foauth%2Fauthorize%3Fclient_id%3D338bfc1dc364ae1bbd7f%26redirect_uri%3Dhttps%253A%252F%252Fcodebattle.hexlet.io%252Fauth%252Fgithub%252Fcallback%26scope%3Duser%253Aemail
@@ -72,7 +72,7 @@
   prerequisites: |
     Открыта страница логина https://codebattle.hexlet.io/session/new?locale=en&next=%2F
   test-data: |
-    
+    Логин = example@mail.com, пароль = 123456
   steps:
     - Нажимаем на кнопку "Sign in with Discord"
     - Переходим на страницу https://discord.com/login?redirect_to=%2Foauth2%2Fauthorize%3Fscope%3Didentify%2Bemail%26client_id%3D805773644780666930%26redirect_uri%3Dhttps%253A%252F%252Fcodebattle.hexlet.io%252Fauth%252Fdiscord%252Fcallback%26response_type%3Dcode
@@ -107,7 +107,7 @@
   steps:
   
   expected-result: |
-
+     Должен произойти переход на страницу битвы
 
 - summary: |
     Проверка возможности пользователя сыграть с ботом
@@ -120,6 +120,7 @@
   steps:
   
   expected-result: |
+     Должен произойти переход на страницу битвы
 
 - summary: |
     Проверка возможности пользователя сыграть со случайным соперником
@@ -132,6 +133,7 @@
   steps:
   
   expected-result: |
+     Должен произойти переход на страницу битвы
 
 - summary: |
     Проверка возможности пользователя создать турнир
