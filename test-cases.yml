@@ -377,7 +377,6 @@
     empty
   steps:
     - Нажать на кнопку никнейма
-    - Нажать на кнопку "My profile"
     - Нажать на кнопку "Settings"
   expected-result: |
     Должна открыться страница с настройками профиля
@@ -392,34 +391,111 @@
     empty
   steps:
     - Нажать на кнопку никнейма
-    - Нажать на кнопку "My profile"
     - Нажать кнопку "Users rating"
   expected-result: |
     Должен отобразиться общий рейтинг всех пользователей
 
 - summary: |
-    Проверка возможности пользователя просмотреть задачи
+    Проверка возможности пользователя просмотреть подробную информацию о задачах
   requirement: |
-     
+    При нажатии на кнопку "Tasks" должна отобразиться таблица с задачами
   prerequisites: |
-    
+    Открыта главная страница https://codebattle.hexlet.io/#lobby
   test-data: |
-    
+    empty
   steps:
-  
+    - Нажать на кнопку никнейма
+    - Нажать на кнопку "Tasks"
+    - Нажать на кнопку "Show"
   expected-result: |
+    Должна отобразиться подробная информация а задачах
 
 - summary: |
-    Проверка скорости загрузки сайта
+    Проверка возможности пользователя создать новую задачу
   requirement: |
-     
+    При нажатии на кнопку "Create new task" должна открыться страница с созданием задачи
   prerequisites: |
-    
+    Открыта главная страница https://codebattle.hexlet.io/#lobby
   test-data: |
-    
+    empty
   steps:
-  
+    - Нажать на кнопку никнейма
+    - Нажать на кнопку "Tasks"
+    - Нажать на кнопку "Create new task"
   expected-result: |
+    Должна открыть страница с созданием задачи
+
+- summary: |
+    Проверка возможности пользователя создать пакеты задач
+  requirement: |
+    При нажатии на кнопку "Create new task pack" должна открыться страница с созданием пакета задач
+  prerequisites: |
+    Открыта главная страница https://codebattle.hexlet.io/#lobby
+  test-data: |
+    empty
+  steps:
+    - Нажать на кнопку никнейма
+    - Нажать на кнопку "Tasks"
+    - Нажать на кнопку "Task packs"
+    - Нажать на кнопку "Create new task pack"
+  expected-result: |
+    Должна открыться страница с созданием пакета задач
+
+- summary: |
+    Проверка возможности пользователя перейти на страницу с исходным кодом на Github
+  requirement: |
+    При нажатии на кнопку "SourceCode" должен произойти переход на страницу с исходным кодом
+  prerequisites: |
+    Открыта главная страница https://codebattle.hexlet.io/#lobby
+  test-data: |
+    empty
+  steps:
+    - Нажать на кнопку никнейма
+    - Нажать на кнопку "SourceCode"
+  expected-result: |
+    Должен произойти переход на страницу с исходным кодом
+
+- summary: |
+    Проверка возможности пользователя перейти на главную страницу Hexlet
+  requirement: |
+    При нажатии на кнопку "Hexlet" должен произойти переход на главную страницу
+  prerequisites: |
+    Открыта главная страница https://codebattle.hexlet.io/#lobby
+  test-data: |
+    empty
+  steps:
+    - Нажать на кнопку никнейма
+    - Нажать на кнопку "Hexlet"
+  expected-result: |
+    Должен произойти переход на главную страницу
+
+- summary: |
+    Проверка возможности пользователя присоединиться к группе игры в Discord
+  requirement: |
+    При нажатии на кнопку "Join Discord" должен произойти переход на страницу игры в Discord
+  prerequisites: |
+    Открыта главная страница https://codebattle.hexlet.io/#lobby
+  test-data: |
+    empty
+  steps:
+    - Нажать на кнопку никнейма
+    - Нажать на кнопку "Join Discord"
+  expected-result: |
+    Должен произойти переход на страницу игры в Discord
+
+- summary: |
+    Проверка возможности пользователя присоединиться к группе игры в Telegram
+  requirement: |
+    При нажатии на кнопку "Tg#codebattle" должен произойти переход на страницу игры в Telegram
+  prerequisites: |
+    Открыта главная страница https://codebattle.hexlet.io/#lobby
+  test-data: |
+    empty
+  steps:
+    - Нажать на кнопку никнейма
+    - Нажать на кнопку "Tg#codebattle"
+  expected-result: |
+    Должен произойти переход на страницу игры в Telegram
 
 - summary: |
     Проверка адаптивности сайта на различных устройствах (Galaxy Mini S5570, Lumia Series, Nexus 4)
