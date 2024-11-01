@@ -227,6 +227,46 @@
     Пользователь должен присоединиться к турниру
 
 - summary: |
+    Проверка возможности пользователя просматривать подробную информацию о турнирах 
+  requirement: |
+    При нажатии на кнопку "Tournaments Info" должна отобразиться подробная информация о турнирах
+  prerequisites: |
+    Открыта главная страница https://codebattle.hexlet.io/#lobby
+  test-data: |
+    empty
+  steps:
+    - Нажимаем на кнопку "Tournaments"
+    - Нажимаем на кнопку "Tournaments Info"
+  expected-result: |
+    Должна отобразиться подробная информация о турнирах
+
+- summary: |
+    Проверка возможности пользователя создать свой турнир
+  requirement: |
+    При нажатии на кнопку "Create" должен создаться свой турнир
+  prerequisites: |
+    Открыта страница с турнирами https://codebattle.hexlet.io/#tournaments
+  test-data: |
+    empty
+  steps:
+    - Нажимаем на кнопку "Tournament info"
+    - Заполняем все необходимые поля "Create a new tournament"
+  expected-result: |
+    Должен создаться свой турнир
+
+- summary: |
+    Проверка возможности пользователя 
+  requirement: |
+     
+  prerequisites: |
+    
+  test-data: |
+    
+  steps:
+  
+  expected-result: |
+
+- summary: |
     Проверка возможности пользователя просматривать историю сыгранных битв 
   requirement: |
     При нажатии на кнопку "History" должна открыться история всех сыгранных битв
