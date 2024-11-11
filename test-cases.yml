@@ -60,7 +60,6 @@
     Логин = example@mail.com, пароль = 123456
   steps:
     - Нажимаем на кнопку "Sign in with Github"
-    - Переходим на страницу https://github.com/login?client_id=338bfc1dc364ae1bbd7f&return_to=%2Flogin%2Foauth%2Fauthorize%3Fclient_id%3D338bfc1dc364ae1bbd7f%26redirect_uri%3Dhttps%253A%252F%252Fcodebattle.hexlet.io%252Fauth%252Fgithub%252Fcallback%26scope%3Duser%253Aemail
     - Вводим логин
     - Вводим пароль
     - Нажимаем на кнопку "Sign in"
