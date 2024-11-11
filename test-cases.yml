@@ -24,7 +24,7 @@
   requirement: |
     При верном вводе логине и пароля пользователь должен войти в систему
   prerequisites: |
-    Открыта страница логина https://codebattle.hexlet.io/session/new?locale=en&next=%2F
+    Открыта главная страница игры https://codebattle.hexlet.io/ 
   test-data: |
     Логин = example@mail.com, пароль = 123456
   steps:
