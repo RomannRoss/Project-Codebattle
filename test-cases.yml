@@ -33,7 +33,7 @@
     - Вводим пароль
     - Нажимаем на кнопку "Submit"
   expected-result: |
-    Должна произойти вход пользователя в аккаунт (открывается лобби, в углу пользователь видит свой ник)
+    Должен произойти вход пользователя в аккаунт (открывается лобби, в углу пользователь видит свой ник)
 
 - summary: |
     Проверка невозможности входа пользователя с несуществующими логином и паролем
@@ -56,42 +56,43 @@
   requirement: |
     При верном вводе логине и пароля пользователь должен зарегистрироваться
   prerequisites: |
-    Открыта страница логина https://codebattle.hexlet.io/session/new?locale=en&next=%2F
+    Открыта главная страница игры https://codebattle.hexlet.io/ 
   test-data: |
     Логин = example@mail.com, пароль = 123456
   steps:
+    - Переходим на страницу регистрации, нажав на кнопку "Sign in"
     - Нажимаем на кнопку "Sign in with Github"
     - Вводим логин
     - Вводим пароль
     - Нажимаем на кнопку "Sign in"
     - Переходим в почту и подтверждаем учетную запись
   expected-result: |
-     Пользователь должен зарегистрироваться
+     Должна произойти регистрация нового пользователя (открывается лобби, в углу пользователь видит свой ник)
 
 - summary: |
     Проверка регистрации пользователя через Discord
   requirement: |
     При верном вводе логине и пароля пользователь должен зарегистрироваться
   prerequisites: |
-    Открыта страница логина https://codebattle.hexlet.io/session/new?locale=en&next=%2F
+    Открыта главная страница игры https://codebattle.hexlet.io/ 
   test-data: |
     Логин = example@mail.com, пароль = 123456
   steps:
+    - Переходим на страницу регистрации, нажав на кнопку "Sign in"
     - Нажимаем на кнопку "Sign in with Discord"
-    - Переходим на страницу https://discord.com/login?redirect_to=%2Foauth2%2Fauthorize%3Fscope%3Didentify%2Bemail%26client_id%3D805773644780666930%26redirect_uri%3Dhttps%253A%252F%252Fcodebattle.hexlet.io%252Fauth%252Fdiscord%252Fcallback%26response_type%3Dcode
     - Вводим логин
     - Вводим пароль
     - Нажимаем на кнопку "Вход"
     - Переходим в почту и подтверждаем учетную запись
   expected-result: |
-     Пользователь должен зарегистрироваться
+     Должна произойти регистрация нового пользователя (открывается лобби, в углу пользователь видит свой ник)
 
 - summary: |
     Проверка возможности пользователя сыграть простую битву без регистрации
   requirement: |
     При нажатии на кнопку "Try simple battle" незарегистрированным пользователем должен произойти переход на страницу битвы
   prerequisites: |
-    Открыта главная страница https://codebattle.hexlet.io/
+    Разлогиненным пользователем открыта главная страница https://codebattle.hexlet.io/
   test-data: |
     empty
   steps:
@@ -104,7 +105,7 @@
   requirement: |
     При нажатии на кнопку "Create invite" должен произойти переход на страницу битвы
   prerequisites: |
-    Открыта главная страница https://codebattle.hexlet.io/#lobby
+    Залогиненным пользователем открыто лобби https://codebattle.hexlet.io/#lobby
   test-data: |
     empty
   steps:
@@ -119,7 +120,7 @@
   requirement: |
     При нажатии на кнопку "Create battle" должен произойти переход на страницу битвы
   prerequisites: |
-    Открыта главная страница https://codebattle.hexlet.io/#lobby
+    Залогиненным пользователем открыто лобби https://codebattle.hexlet.io/#lobby
   test-data: |
      empty
   steps:
@@ -134,7 +135,7 @@
   requirement: |
     При нажатии на кнопку "Create battle" должен произойти переход на страницу битвы
   prerequisites: |
-    Открыта главная страница https://codebattle.hexlet.io/#lobby
+    Залогиненным пользователем открыто лобби https://codebattle.hexlet.io/#lobby
   test-data: |
     empty
   steps:
@@ -149,7 +150,7 @@
   requirement: |
     При нажатии на кнопку выбора уровня сложности должен отобразиться уровень "elementary", "easy", "medium" или "hard"
   prerequisites: |
-    Открыта главная страница https://codebattle.hexlet.io/#lobby
+    Залогиненным пользователем открыто лобби https://codebattle.hexlet.io/#lobby
   test-data: |
     empty
   steps:
@@ -163,7 +164,7 @@
   requirement: |
     При перемещении ползунка выбора продолжительности битвы должно отобразиться время от 3-х до 60 минут 
   prerequisites: |
-    Открыта главная страница https://codebattle.hexlet.io/#lobby
+    Залогиненным пользователем открыто лобби https://codebattle.hexlet.io/#lobby
   test-data: |
     empty
   steps:
@@ -177,7 +178,7 @@
   requirement: |
     При выборе определенной задачи из списка, под ним должны высветиться соответствующие теги
   prerequisites: |
-    Открыта главная страница https://codebattle.hexlet.io/#lobby
+    Залогиненным пользователем открыто лобби https://codebattle.hexlet.io/#lobby
   test-data: |
     empty
   steps:
@@ -191,7 +192,7 @@
   requirement: |
     При выборе задачи "random task" из списка пользователь должен иметь возможность самостоятельного выбора тегов
   prerequisites: |
-    Открыта главная страница https://codebattle.hexlet.io/#lobby
+    Залогиненным пользователем открыто лобби https://codebattle.hexlet.io/#lobby
   test-data: |
     empty
   steps:
@@ -206,7 +207,7 @@
   requirement: |
     При нажатии на кнопку "Fight" пользователь должен перейти на страницу битвы
   prerequisites: |
-    Открыта главная страница https://codebattle.hexlet.io/#lobby
+    Залогиненным пользователем открыто лобби https://codebattle.hexlet.io/#lobby
   test-data: |
     empty
   steps:
@@ -219,7 +220,7 @@
   requirement: |
     При нажатии на кнопку "Join" пользователь должен присоединиться к турниру
   prerequisites: |
-    Открыта главная страница https://codebattle.hexlet.io/#lobby
+    Залогиненным пользователем открыто лобби https://codebattle.hexlet.io/#lobby
   test-data: |
     empty
   steps:
@@ -234,7 +235,7 @@
   requirement: |
     При нажатии на кнопку "Tournaments Info" должна отобразиться подробная информация о турнирах
   prerequisites: |
-    Открыта главная страница https://codebattle.hexlet.io/#lobby
+    Залогиненным пользователем открыто лобби https://codebattle.hexlet.io/#lobby
   test-data: |
     empty
   steps:
@@ -262,7 +263,7 @@
   requirement: |
     При нажатии на кнопку "History" должна открыться история всех сыгранных битв
   prerequisites: |
-    Открыта главная страница https://codebattle.hexlet.io/#lobby
+    Залогиненным пользователем открыто лобби https://codebattle.hexlet.io/#lobby
   test-data: |
     empty
   steps:
@@ -275,7 +276,7 @@
   requirement: |
     При нажатии на кнопку "Send" сообщение пользователя должно отобразиться в общем чате
   prerequisites: |
-    Открыта главная страница https://codebattle.hexlet.io/#lobby
+    Залогиненным пользователем открыто лобби https://codebattle.hexlet.io/#lobby
   test-data: |
     empty
   steps:
@@ -289,7 +290,7 @@
   requirement: |
     При нажатии на кнопку "Send" другому пользователю должно отправиться личное сообщение
   prerequisites: |
-    Открыта главная страница https://codebattle.hexlet.io/#lobby
+    Залогиненным пользователем открыто лобби https://codebattle.hexlet.io/#lobby
   test-data: |
     empty
   steps:
@@ -305,7 +306,7 @@
   requirement: |
     При нажатии на кнопку "Create invite" другому пользователю должно отправиться приглашение на битву д
   prerequisites: |
-    Открыта главная страница https://codebattle.hexlet.io/#lobby
+    Залогиненным пользователем открыто лобби https://codebattle.hexlet.io/#lobby
   test-data: |
     empty
   steps:
@@ -320,7 +321,7 @@
   requirement: |
     При нажатии на кнопку "Invites" должен открыться список с приглашениями
   prerequisites: |
-    Открыта главная страница https://codebattle.hexlet.io/#lobby
+    Залогиненным пользователем открыто лобби https://codebattle.hexlet.io/#lobby
   test-data: |
     empty
   steps:
@@ -333,7 +334,7 @@
   requirement: |
     При нажатии на кнопку "My profile" должен произойти переход на страницу профиля
   prerequisites: |
-    Открыта главная страница https://codebattle.hexlet.io/#lobby
+    Залогиненным пользователем открыто лобби https://codebattle.hexlet.io/#lobby
   test-data: |
     empty
   steps:
@@ -347,7 +348,7 @@
   requirement: |
     При нажатии на кнопку "Show" должна отобразиться подробная информация о сыгранной игре
   prerequisites: |
-    Открыта главная страница https://codebattle.hexlet.io/#lobby
+    Залогиненным пользователем открыто лобби https://codebattle.hexlet.io/#lobby
   test-data: |
     empty
   steps:
@@ -361,9 +362,9 @@
 - summary: |
     Проверка возможности пользователя настраивать свой профиль 
   requirement: |
-     При нажатии на кнопку "Settings" должна отобразиться страница с настройками профиля
+    При нажатии на кнопку "Settings" должна отобразиться страница с настройками профиля
   prerequisites: |
-    Открыта главная страница https://codebattle.hexlet.io/#lobby
+    Залогиненным пользователем открыто лобби https://codebattle.hexlet.io/#lobby
   test-data: |
     empty
   steps:
@@ -377,7 +378,7 @@
   requirement: |
     При нажатии на кнопку "Users rating" должна отобразиться таблица с рейтингом
   prerequisites: |
-    Открыта главная страница https://codebattle.hexlet.io/#lobby
+    Залогиненным пользователем открыто лобби https://codebattle.hexlet.io/#lobby
   test-data: |
     empty
   steps:
@@ -391,7 +392,7 @@
   requirement: |
     При нажатии на кнопку "Tasks" должна отобразиться таблица с задачами
   prerequisites: |
-    Открыта главная страница https://codebattle.hexlet.io/#lobby
+    Залогиненным пользователем открыто лобби https://codebattle.hexlet.io/#lobby
   test-data: |
     empty
   steps:
@@ -406,7 +407,7 @@
   requirement: |
     При нажатии на кнопку "Create new task" должна открыться страница с созданием задачи
   prerequisites: |
-    Открыта главная страница https://codebattle.hexlet.io/#lobby
+    Залогиненным пользователем открыто лобби https://codebattle.hexlet.io/#lobby
   test-data: |
     empty
   steps:
@@ -421,7 +422,7 @@
   requirement: |
     При нажатии на кнопку "Create new task pack" должна открыться страница с созданием пакета задач
   prerequisites: |
-    Открыта главная страница https://codebattle.hexlet.io/#lobby
+    Залогиненным пользователем открыто лобби https://codebattle.hexlet.io/#lobby
   test-data: |
     empty
   steps:
@@ -437,7 +438,7 @@
   requirement: |
     При нажатии на кнопку "SourceCode" должен произойти переход на страницу с исходным кодом
   prerequisites: |
-    Открыта главная страница https://codebattle.hexlet.io/#lobby
+    Залогиненным пользователем открыто лобби https://codebattle.hexlet.io/#lobby
   test-data: |
     empty
   steps:
@@ -447,11 +448,11 @@
     Должен произойти переход на страницу с исходным кодом
 
 - summary: |
-    Проверка возможности пользователя перейти на главную страницу Hexlet
+    Проверка возможности пользователя перейти на главную страницу сайта Hexlet
   requirement: |
     При нажатии на кнопку "Hexlet" должен произойти переход на главную страницу
   prerequisites: |
-    Открыта главная страница https://codebattle.hexlet.io/#lobby
+    Залогиненным пользователем открыто лобби https://codebattle.hexlet.io/#lobby
   test-data: |
     empty
   steps:
@@ -465,7 +466,7 @@
   requirement: |
     При нажатии на кнопку "Join Discord" должен произойти переход на страницу игры в Discord
   prerequisites: |
-    Открыта главная страница https://codebattle.hexlet.io/#lobby
+    Залогиненным пользователем открыто лобби https://codebattle.hexlet.io/#lobby
   test-data: |
     empty
   steps:
@@ -479,7 +480,7 @@
   requirement: |
     При нажатии на кнопку "Tg#codebattle" должен произойти переход на страницу игры в Telegram
   prerequisites: |
-    Открыта главная страница https://codebattle.hexlet.io/#lobby
+    Залогиненным пользователем открыто лобби https://codebattle.hexlet.io/#lobby
   test-data: |
     empty
   steps:
