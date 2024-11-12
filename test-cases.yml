@@ -260,7 +260,8 @@
   requirement: |
     При нажатии на кнопку "Fight" пользователь должен перейти на страницу битвы
   prerequisites: |
-    Залогиненным пользователем открыто лобби https://codebattle.hexlet.io/#lobby
+    - Залогиненным пользователем открыто лобби https://codebattle.hexlet.io/#lobby
+    - В списке есть доступная для присоединения игра
   test-data: |
     empty
   steps:
@@ -383,6 +384,77 @@
     Должны отобразиться приглашения на битву от других игроков
 
 - summary: |
+    Проверка корректного завершения игры в случае победы 
+  requirement: |
+    При победе должно высветиться окно с надписью "Woohoo, you're Champion!!!!!"
+  prerequisites: |
+    Залогиненным пользователем открыто лобби https://codebattle.hexlet.io/#lobby
+  test-data: |
+    empty
+  steps:
+    - Нажимаем на кнопку "Create a game"
+    - Выбираем параметры по умолчанию
+    - Выбираем тип игры "With a bot"
+    - Нажимаем на кнопку "Create battle"
+    - Вводим верный код в окно терминала на странице битвы
+    - Нажимаем на кнопку "Run"
+  expected-result: |
+    Должно отобразиться окно с надписью "Woohoo, you're Champion!!!!!"
+
+- summary: |
+    Проверка корректного завершения игры в случае поражения
+  requirement: |
+    При поражении должно высветиться окно с надписью "You lost the game"
+  prerequisites: |
+    Залогиненным пользователем открыто лобби https://codebattle.hexlet.io/#lobby
+  test-data: |
+    empty
+  steps:
+    - Нажимаем на кнопку "Create a game"
+    - Выбираем параметры по умолчанию
+    - Выбираем тип игры "With a bot"
+    - Нажимаем на кнопку "Create battle"
+    - Вводим неправильный код в окно терминала на странице битвы
+    - Нажимаем на кнопку "Run"
+  expected-result: |
+    Должно отобразиться окно с надписью "You lost the game"
+
+- summary: |
+    Проверка корректного завершения игры по таймеру
+  requirement: |
+    При завершении игры по таймеру должна отобразиться надпись "Time is up. There are no winners in the game" 
+  prerequisites: |
+    Залогиненным пользователем открыто лобби https://codebattle.hexlet.io/#lobby
+  test-data: |
+    empty
+  steps:
+    - Нажимаем на кнопку "Create a game"
+    - Выбираем параметры по умолчанию
+    - Выбираем тип игры "With a bot"
+    - Нажимаем на кнопку "Create battle"
+    - Ждем, пока закончится время
+  expected-result: |
+    На странице битвы должна отобразиться надпись "Time is up. There are no winners in the game" 
+
+- summary: |
+    Проверка корректного завершения игры в случае, если пользователь сдается
+  requirement: |
+    В случае того, если пользователь сдается, должно высветиться окно с надписью "If you read this you've lost the game"
+  prerequisites: |
+    Залогиненным пользователем открыто лобби https://codebattle.hexlet.io/#lobby
+  test-data: |
+    empty
+  steps:
+    - Нажимаем на кнопку "Create a game"
+    - Выбираем параметры по умолчанию
+    - Выбираем тип игры "With a bot"
+    - Нажимаем на кнопку "Create battle"
+    - Нажимаем на кнопку "Give up"
+    - Нажимаем на кнопку подтверждения
+  expected-result: |
+    Должно отобразиться окно с надписью "If you read this you've lost the game"
+
+- summary: |
     Проверка возможности пользователя просмотреть свою статистику
   requirement: |
     При нажатии на кнопку "My profile" должен произойти переход на страницу профиля
@@ -468,7 +540,7 @@
     - Нажать на кнопку "Tasks"
     - Нажать на кнопку "Create new task"
   expected-result: |
-    Должна открыть страница с созданием задачи
+    Должна открыться страница с созданием задачи
 
 - summary: |
     Проверка возможности пользователя создать пакеты задач
